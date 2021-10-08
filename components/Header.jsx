@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { useSession, signOut } from 'next-auth/client';
 import {
   BellIcon,
   ChatIcon,
@@ -17,6 +18,8 @@ import {
 import HeaderIcon from './HeaderIcon';
 
 export default function Header() {
+  const [session] = useSession();
+
   return (
     <div className='sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md'>
       <div className='flex items-center'>
@@ -48,8 +51,16 @@ export default function Header() {
       </div>
 
       <div className='flex items-center sm:space-x-2 justify-end'>
-        {/* <Image  /> */}
-        <p className='font-semibold whitespace-nowrap pr-3'>Rick Astley</p>
+        {session && <Image
+          src={session.user.image}
+          alt={session.user.name}
+          width={40}
+          height={40}
+          layout='fixed'
+          className='rounded-full cursor-pointer'
+          onClick={signOut}
+        />}
+        {session && <p className='font-semibold whitespace-nowrap pr-3'>{session.user.name}</p>}
         <ViewGridIcon className='icon' />
         <ChatIcon className='icon' />
         <BellIcon className='icon' />
