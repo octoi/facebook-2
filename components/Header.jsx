@@ -32,7 +32,7 @@ export default function Header() {
           <input
             type="text"
             placeholder='Search Facebook'
-            className='bg-transparent flex ml-2 outline-none placeholder-gray-500'
+            className='hidden md:inline-flex bg-transparent flex ml-2 outline-none placeholder-gray-500'
           />
         </div>
       </div>
@@ -45,6 +45,15 @@ export default function Header() {
           <HeaderIcon Icon={ShoppingCartIcon} />
           <HeaderIcon Icon={UserGroupIcon} />
         </div>
+      </div>
+
+      <div className='flex items-center sm:space-x-2 justify-end'>
+        {/* <Image  /> */}
+        <p className='font-semibold whitespace-nowrap pr-3'>Rick Astley</p>
+        <ViewGridIcon className='icon' />
+        <ChatIcon className='icon' />
+        <BellIcon className='icon' />
+        <ChevronDownIcon className='icon' />
       </div>
     </div>
   )
