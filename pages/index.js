@@ -3,6 +3,7 @@ import { getSession } from '../node_modules/next-auth/client';
 
 import Header from '../components/Header';
 import Login from '../components/Login';
+import Sidebar from '../components/Sidebar';
 
 export default function Home({ session }) {
   if (!session) return <Login />;
@@ -16,8 +17,8 @@ export default function Home({ session }) {
 
       <Header />
 
-      <main>
-        {/* Sidebar */}
+      <main className='flex'>
+        <Sidebar />
         {/* Feed */}
         {/* Widgets */}
       </main>
