@@ -60,7 +60,7 @@ export default function Header() {
           className='rounded-full cursor-pointer'
           onClick={signOut}
         />}
-        {session && <p className='font-semibold whitespace-nowrap pr-3'>{session.user.name}</p>}
+        {session && <p className='font-semibold whitespace-nowrap pr-3 hidden md:inline-flex'>{session.user.name}</p>}
         <ViewGridIcon className='icon' />
         <ChatIcon className='icon' />
         <BellIcon className='icon' />
