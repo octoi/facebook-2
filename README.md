@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p text-align="center">
+	<img src='https://links.papareact.com/t4i' alt='facebook' />    
+</p>
 
-## Getting Started
 
-First, run the development server:
+# Facebook 2.0
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Facebook clone using Next JS and Firebase
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tutorial from [Sonny Sangha](https://youtu.be/dBotWYKYYWc) 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Setup 👷‍♂️
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [Setup Facebook App](https://youtu.be/dBotWYKYYWc?t=4059)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  - Copy the Facebook App Id & Secret
 
-## Learn More
+  - Create a file named `.env.local` in root dir
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    $ touch .env.local
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - Enter content like this
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```
+    FACEBOOK_ID=YOUR_FACEBOOK_APP_ID
+    FACEBOOK_SECRET=YOUR_FACEBOOK_APP_SECRET
+    NEXTAUTH_URL=http://localhost:3000
+    ```
 
-## Deploy on Vercel
+    
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Setup Firebase](https://youtu.be/dBotWYKYYWc?t=8939)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  - head over to [Firebase Console](https://console.firebase.google.com) and create project by enabling Firestore & Storage
+
+  - Create a web app and copy the firebase config
+
+  - Create a new file named `firebaseConfig.js` in the root dir
+
+    ```bash
+    $ touch firebaseConfig.js
+    ```
+
+  - Enter firebase config in that file like this
+
+    ```javascript
+    const firebaseConfig = {
+      apiKey: 'apiKey',
+      authDomain: 'authDomain',
+      projectId: 'projectId',
+      storageBucket: 'storageBucket',
+      messagingSenderId: 'messagingSenderId',
+      appId: 'appId',
+    };
+    
+    export default firebaseConfig;
+    ```
+
+- Install dependencies
+
+  ```bash
+  $ npm install
+  # Or using yarn
+  $ yarn install
+  ```
+
+- Run development server
+
+  ```bash
+  $ npm run dev
+  # Or using yarn
+  $ yarn dev
+  ```
+
+Happy Coding 😉
