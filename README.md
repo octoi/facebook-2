@@ -2,6 +2,7 @@
 	<img src='https://links.papareact.com/t4i' alt='facebook' />    
 </p>
 
+
 # Facebook 2.0
 
 Facebook clone using Next JS and Firebase
@@ -11,6 +12,24 @@ Tutorial from [Sonny Sangha](https://youtu.be/dBotWYKYYWc)
 ### Setup 👷‍♂️
 
 - [Setup Facebook App](https://youtu.be/dBotWYKYYWc?t=4059)
+
+  - Copy the Facebook App Id & Secret
+
+  - Create a file named `.env.local` in root dir
+
+    ```bash
+    $ touch .env.local
+    ```
+
+  - Enter content like this
+
+    ```
+    FACEBOOK_ID=YOUR_FACEBOOK_APP_ID
+    FACEBOOK_SECRET=YOUR_FACEBOOK_APP_SECRET
+    NEXTAUTH_URL=http://localhost:3000
+    ```
+
+    
 
 - [Setup Firebase](https://youtu.be/dBotWYKYYWc?t=8939)
 
@@ -24,7 +43,7 @@ Tutorial from [Sonny Sangha](https://youtu.be/dBotWYKYYWc)
     $ touch firebaseConfig.js
     ```
 
-  - Paste firebase config in that file like this
+  - Enter firebase config in that file like this
 
     ```javascript
     const firebaseConfig = {
