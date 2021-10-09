@@ -35,7 +35,7 @@ export default function Header() {
           <input
             type="text"
             placeholder='Search Facebook'
-            className='hidden md:inline-flex bg-transparent flex ml-2 outline-none placeholder-gray-500'
+            className='hidden md:inline-flex bg-transparent ml-2 outline-none placeholder-gray-500'
           />
         </div>
       </div>
